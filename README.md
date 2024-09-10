@@ -126,8 +126,7 @@ select
     gender,
     count(*) as total_trans
 from retail_sales
-group 
-    by 
+group by 
     category,
     gender
 order by 1
@@ -136,8 +135,8 @@ order by 1
 7. **Calculate the average sale for each month. Find out best selling month in each year**:
 ```sql
 select 
-       year,
-       month,
+    year,
+    month,
     avg_sale
 from
 (    
