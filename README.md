@@ -166,7 +166,7 @@ limit 5
 9. **Find unique customers who purchased items from each category.**:
 ```sql
 select 
-	category,
+    category,
     count(distinct customer_id) as count_unique_cs
 from retail_sales
 group by category;
@@ -179,7 +179,7 @@ as
 (
 select *,
 	case
-		when extract(hour from sale_time) < 12 then 'Morning'
+	when extract(hour from sale_time) < 12 then 'Morning'
         when extract(hour from sale_time) between 12 and 17 then 'Afternoon'
         else 'Evening'
 	end as shift
